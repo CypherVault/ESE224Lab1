@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Chris\source\repos\Lab1Part5\Lab1Part5\main.cpp(9,6): warning C4101: 'i': unreferenced local variable
+  Lab1Part5.vcxproj -> C:\Users\Chris\source\repos\Lab1Part5\x64\Debug\Lab1Part5.exe

@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Chris\source\repos\Hw1Part5\Hw1Part5\main.cpp(31,6): warning C4101: 'i': unreferenced local variable
+  Hw1Part5.vcxproj -> C:\Users\Chris\source\repos\Hw1Part5\x64\Debug\Hw1Part5.exe

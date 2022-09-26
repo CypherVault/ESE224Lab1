@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\Chris\source\repos\Lab3Part1\Lab3P1\main.cpp(16,12): warning C4101: 'h': unreferenced local variable
+C:\Users\Chris\source\repos\Lab3Part1\Lab3P1\main.cpp(16,9): warning C4101: 'w': unreferenced local variable
+C:\Users\Chris\source\repos\Lab3Part1\Lab3P1\main.cpp(15,6): warning C4101: 'entries': unreferenced local variable
+  Lab3P1.vcxproj -> C:\Users\Chris\source\repos\Lab3Part1\x64\Debug\Lab3P1.exe

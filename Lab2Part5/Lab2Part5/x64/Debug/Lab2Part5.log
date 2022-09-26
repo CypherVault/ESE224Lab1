@@ -1,0 +1,8 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Lab2Part5.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Rectangle.cpp
+C:\Users\Chris\source\repos\Lab2Part5\Lab2Part5\Rectangle.cpp(96,9): warning C4804: '<=': unsafe use of type 'bool' in operation
+C:\Users\Chris\source\repos\Lab2Part5\Lab2Part5\Rectangle.cpp(99,19): warning C4804: '<=': unsafe use of type 'bool' in operation
+C:\Users\Chris\source\repos\Lab2Part5\Lab2Part5\Rectangle.cpp(99,36): warning C4804: '<=': unsafe use of type 'bool' in operation
+C:\Users\Chris\source\repos\Lab2Part5\Lab2Part5\Rectangle.cpp(106,3): warning C4804: '+=': unsafe use of type 'bool' in operation
+C:\Users\Chris\source\repos\Lab2Part5\Lab2Part5\Rectangle.cpp(107,3): warning C4804: '+=': unsafe use of type 'bool' in operation
+  Lab2Part5.vcxproj -> C:\Users\Chris\source\repos\Lab2Part5\x64\Debug\Lab2Part4.exe

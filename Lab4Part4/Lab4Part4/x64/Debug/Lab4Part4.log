@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Chris\source\repos\Lab4Part4\Lab4Part4\main.cpp(39,6): warning C4101: 'ncopy': unreferenced local variable
+  Lab4Part4.vcxproj -> C:\Users\Chris\source\repos\Lab4Part4\x64\Debug\Lab4Part4.exe

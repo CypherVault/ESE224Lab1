@@ -20,7 +20,7 @@ int main()
     std::default_random_engine eng(rd());
     std::uniform_real_distribution<double> distr(MIN, MAX);
 
-    std::cout << "enter the number to be generated";
+    std::cout << "enter the amount of numbers to be generated ";
     std::cin >> n;
 
     numgen = distr(eng);
@@ -42,7 +42,7 @@ int main()
         average = (numgen + average) / 2;
 
     }
-    cout << "greatest:" << greatest << "minimum:" << least << "Average:" << average;
+    cout << "greatest:" << greatest << " minimum:" << least << " Average:" << average;
 
     return 0;
 }

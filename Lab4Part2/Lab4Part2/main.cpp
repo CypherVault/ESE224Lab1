@@ -10,11 +10,7 @@ int main() {
     std::string q = "q";
     std::string s1 = "hElloO";
 
-  
-
-
-
-
+ 
     std::cout << "Enter a q if you ever wish to exit. Enter a string of characters or a word(s)" << std::endl;
     std::getline(std::cin, str);
     while ((str) != q) {

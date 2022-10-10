@@ -3,8 +3,6 @@
 #include <cstdlib>
 #include <ctime>
 
-
-
 int main() {
 	
 	double r;

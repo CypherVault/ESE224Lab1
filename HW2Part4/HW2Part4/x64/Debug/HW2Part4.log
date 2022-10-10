@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\Chris\source\repos\HW2Part4\HW2Part4\main.cpp(18,16): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Chris\source\repos\HW2Part4\HW2Part4\main.cpp(31,9): warning C4101: 'a': unreferenced local variable
+C:\Users\Chris\source\repos\HW2Part4\HW2Part4\main.cpp(31,12): warning C4101: 'b': unreferenced local variable
+C:\Users\Chris\source\repos\HW2Part4\HW2Part4\main.cpp(35,9): warning C4101: 'propresult': unreferenced local variable
+  HW2Part4.vcxproj -> C:\Users\Chris\source\repos\HW2Part4\x64\Debug\HW2Part4.exe

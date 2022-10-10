@@ -6,6 +6,7 @@ using namespace std;
 class List {
 private:
 	string file_name;
+	int amount;
 	fstream myFile; 
 	string most_expen;
 	string name;
@@ -16,6 +17,7 @@ private:
 
 public: 
 	List();
+	void updateinternal();
 	void fileOpen();
 	void itemExists(std::string n);
 	void addItem(std::string n, double p);

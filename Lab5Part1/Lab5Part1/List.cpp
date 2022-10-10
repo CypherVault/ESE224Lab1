@@ -9,19 +9,59 @@
 List::List(){
     string str;
     int i = 0;
-    double price;
-    std::ifstream myFile;
+    string price;
+
+   
+    fstream myfile;
+  
+
     myFile.open("itemCatalog.txt");
+
+
+
     if (myFile.fail()) {
         std::cout << "File cannot be opened";
         exit(1);
     }
+   
+
 
     while (!myFile.eof()) {
+
         myFile >> str >> price;
         array[i][0] = str;
         array[i][1] = price;
         i++;
+
+    }
+
+    amount = i;
+
+    /*
+    for (i=0; i <= amount; i++) {
+
+        cout << array[i][0] << " , ";
+        cout << array[i][1];
+
+    }
+
+   
+   */
+}
+
+void List::updateinternal() {
+    string str;
+    string price;
+    int i = 0;
+
+
+    while (!myFile.eof()) {
+
+        myFile >> str >> price;
+        array[i][0] = str;
+        array[i][1] = price;
+        i++;
+
     }
 
 }
@@ -49,18 +89,38 @@ void List::fileOpen() {
 
 
 
-void List::printAll(void) {
+void List::printAll() {
     string str;
-    while (!myFile.eof()) {
-            myFile >> str;
-            cout << str;
+
+  
+    string cost;
+    ifstream myfile;
+    myFile.open("itemCatalog.txt");
+    if (myFile.fail()) {
+        std::cout << "File cannot be opened";
+        exit(1);
     }
 
+    while (!myFile.eof()) {
+
+        myFile >> str >> cost;
+        cout << str << cost;
+
+    }
+    
 }
 
 void List::itemExists(std::string in) {
     string str;
     string price;
+
+    ifstream myfile;
+    myFile.open("itemCatalog.txt");
+    if (myFile.fail()) {
+        std::cout << "File cannot be opened";
+        exit(1);
+    }
+
     while (!myFile.eof()) {
         myFile >> str;
         if (str == in) {
@@ -199,7 +259,7 @@ void List::printTranspose() {
 
     for (int i = 0; i < 30; i++) {
 
-        std::cout << array[i][0] << setw(5);
+        std::cout << array[i][0] << " " << setw(10);
 
 
     }
@@ -209,7 +269,7 @@ void List::printTranspose() {
 
     for (int i = 0; i < 30; i++) {
 
-        std::cout << array[i][1] << setw(8);
+        std::cout << array[i][1] << setw(10);
 
 
     }

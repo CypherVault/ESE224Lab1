@@ -11,6 +11,8 @@ int main() {
 	
 	List list1;
 
+
+
 	int r = 0;
 	controlPanel(list1);
 	cout << "\nExiting the program..." << endl;
@@ -34,6 +36,7 @@ void controlPanel(List& list1) {
 		cout << "(q) - quit the program" << endl;
 		cout << "(s) - print in price decending order" << endl;
 		cout << "(t) - print transposed form" << endl;
+		cout << "(r) - update internal storage" << endl;
 		cout << "\nPlease select an option: ";
 		
 		cout << "enter a command";

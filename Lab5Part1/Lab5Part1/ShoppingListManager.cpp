@@ -29,29 +29,29 @@ void controlPanel(List& list1) {
 
 	while (expression != 'q') {
 
-		cout << "\n(a) - add an item and its price" << endl;
-		cout << "(e) - print the most expensive item in the list" << endl;
-		cout << "(i) - check to see if this item exists" << endl;
-		cout << "(p) - print all items and its price" << endl;
-		cout << "(q) - quit the program" << endl;
-		cout << "(s) - print in price decending order" << endl;
-		cout << "(t) - print transposed form" << endl;
-		cout << "(r) - update internal storage" << endl;
-		cout << "\nPlease select an option: ";
+		cout << "\n(a) - add an item and its price" << endl; //working
+		cout << "(e) - print the most expensive item in the list" << endl; //working
+		cout << "(i) - check to see if this item exists" << endl; // working
+		cout << "(p) - print all items and its price" << endl; //working
+		cout << "(q) - quit the program" << endl; //working
+		cout << "(s) - print in price decending order" << endl; // working
+		cout << "(t) - print transposed form" << endl; // working
+		cout << "\nPlease select an option. ";
 		
-		cout << "enter a command";
+		cout << endl << "Enter a command: "  ;
 		cin >> expression;
 			
 				switch (expression) {
 		case 'a':
-			cout << "\nEnter item name and its price: ";
+			cout << endl << "Enter item name and its price: " << endl;
+			cout << "Item name:";
 			cin >> str; 
-			cout << ","; 
+			cout << endl << "Item Price:";
 			cin >> p;
 			list1.addItem(str, p);
 			break;
 		case 'i':
-			cout << "\nEnter the item name: ";
+			cout << "\nEnter the item name to check: ";
 			cin >> str;
 			list1.itemExists(str);
 			break;

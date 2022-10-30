@@ -1,15 +1,12 @@
 ﻿  List.cpp
   The contents of <execution> are available only with C++17 or later.
-C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(149,23): warning C4244: 'argument': conversion from 'double' to 'const _Elem', possible loss of data
+C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(190,23): warning C4244: 'argument': conversion from 'double' to 'const _Elem', possible loss of data
           with
           [
               _Elem=char
           ]
-C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(155,31): warning C4244: 'argument': conversion from 'double' to 'const _Elem', possible loss of data
-          with
-          [
-              _Elem=char
-          ]
-C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(179,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(179,47): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(234,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(234,47): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(307,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Chris\source\repos\Lab5Part1\Lab5Part1\List.cpp(313,33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Lab5Part1.vcxproj -> C:\Users\Chris\source\repos\Lab5Part1\x64\Debug\Lab5Part1.exe

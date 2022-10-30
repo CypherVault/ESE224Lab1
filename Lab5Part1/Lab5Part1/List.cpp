@@ -3,6 +3,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <string.h>
 #include <execution>
 #include <iomanip>
 
@@ -12,7 +13,7 @@ List::List(){
     string price;
 
    
-    fstream myfile;
+    fstream myFile;
   
 
     myFile.open("itemCatalog.txt");
@@ -35,24 +36,46 @@ List::List(){
 
     }
 
+
+    array[i-1][0] = " ";
+    array[i-1][1] = " ";
+
+    array[i][0] = " ";
+    array[i][1] = " ";
+
     amount = i;
 
-    /*
-    for (i=0; i <= amount; i++) {
+    
+   /* for (i = 0; i <= amount; i++) {
 
         cout << array[i][0] << " , ";
         cout << array[i][1];
 
     }
 
-   
    */
+  
+
+    myFile.close();
 }
 
 void List::updateinternal() {
     string str;
     string price;
     int i = 0;
+
+
+    fstream myfile;
+
+
+    myFile.open("itemCatalog.txt");
+
+
+
+    if (myFile.fail()) {
+        std::cout << "File cannot be opened";
+        exit(1);
+    }
 
 
     while (!myFile.eof()) {
@@ -64,12 +87,22 @@ void List::updateinternal() {
 
     }
 
+    array[i][0] = " ";
+    array[i][1] = " ";
+
+
+
+    array[i - 1][0] = " ";
+    array[i - 1][1] = " ";
+
+    myFile.close();
+
 }
 
 void List::fileOpen() {
 
     string filename;
-    ofstream fileC;
+    fstream fileC;
 
     cout << "which file do you want to check?";
     cin >> filename;
@@ -93,18 +126,11 @@ void List::printAll() {
     string str;
 
   
-    string cost;
-    ifstream myfile;
-    myFile.open("itemCatalog.txt");
-    if (myFile.fail()) {
-        std::cout << "File cannot be opened";
-        exit(1);
-    }
+    updateinternal();
 
-    while (!myFile.eof()) {
+    for (int i = 0; i <= amount-1; i++) {
 
-        myFile >> str >> cost;
-        cout << str << cost;
+        cout << array[i][0] << " , ";cout << array[i][1] << endl;
 
     }
     
@@ -114,7 +140,7 @@ void List::itemExists(std::string in) {
     string str;
     string price;
 
-    ifstream myfile;
+    ifstream myFile;
     myFile.open("itemCatalog.txt");
     if (myFile.fail()) {
         std::cout << "File cannot be opened";
@@ -122,14 +148,15 @@ void List::itemExists(std::string in) {
     }
 
     while (!myFile.eof()) {
-        myFile >> str;
+        myFile >> str >> price;
         if (str == in) {
-            cout << "Item " << str;
+            cout << "Item " << str << " exists and it costs: " << price << endl;
             
        }
+       
     }
-    cout << "item doesnt exist";
-
+   
+    myFile.close();
 }
 
 void List::print_most_expen() {
@@ -140,7 +167,20 @@ void List::print_most_expen() {
     int largestindex1;
     int largestindex2;
     double largestprice;
-  
+    string pricecopy;
+    ifstream myFile;
+
+    myFile.open("itemCatalog.txt");
+
+
+
+    if (myFile.fail()) {
+        std::cout << "File cannot be opened";
+        exit(1);
+    }
+
+
+
     myFile >> str >> price;
 
         largestprice = price;
@@ -148,12 +188,13 @@ void List::print_most_expen() {
         largestindex2 = 0;
         array[0][0] = str;
         array[0][1] = price;
-
-    while (!myFile.eof()) {
         indexcurr++;
+    while (!myFile.eof()) {
+        
         myFile >> str >> price;
+        pricecopy = to_string(price);
         array[indexcurr][0] = str;
-        array[indexcurr][1] = price;
+        array[indexcurr][1] = pricecopy;
 
         if (price > largestprice) {
 
@@ -161,7 +202,7 @@ void List::print_most_expen() {
             largestindex1 = indexcurr;
             largestindex2 = indexcurr;
         }
-  
+        indexcurr++;
     }
 
     std::cout << "The most expensive item is: " << array[largestindex1][0] << ", and it costs: $" << array[largestindex2][1] << std::endl;
@@ -170,8 +211,21 @@ void List::print_most_expen() {
 
 void List::addItem(string n, double p) {
 
-    myFile << n << " " << p << endl;
+    fstream myFile;
 
+
+    myFile.open("itemCatalog.txt");
+
+    if (myFile.fail()) {
+        std::cout << "File cannot be opened";
+        exit(1);
+    }
+    myFile.seekg(0, std::ios::end);
+    myFile << endl  << n << " " << p << endl;
+
+    updateinternal();
+
+    myFile.close();
 }
 
 bool compareNumbers(string str1, string str2)
@@ -198,60 +252,82 @@ bool compareNumbers(string str1, string str2)
 
 void sortLargeNumbers(string arr[], int n)
 {
+    cout << "sorting large numbers...";
     sort(arr, arr + n, compareNumbers);
 }
 
 void List::priceSort() {
     int i;
-    string pricearray[30];
+   
 
-    for (i = 0; i <= sizeof(array); i++) {
-        pricearray[i] = array[i][1];
-    }
-
-    int n = sizeof(pricearray) / sizeof(pricearray[0]);
-    sortLargeNumbers(pricearray, n);
-
+    string str;
+    string price;
  
-
-    //for (i = 0; i <= 30; i++) {
-      //  pricearray[i] = array[i][1];
-    //}
-
-    string elem;
-    int index1 = 0;
-        int index2 = 0;
-
-    for (i = 0; i <= 30; i++) {
-
-        elem = array[index1][0];
+    int u = 0;
 
 
-    int index2 = 0;
-    while (index2 < 30)
-    {
-        if (pricearray[index2] == elem) {
-            break;
-        }
-        index2++;
-    }
-
-    sortedarray[index2][0] = array[index1][0];
-    sortedarray[index2][1] = array[index1][1];
+    fstream myfile;
     
-    index1++;
+
+    myFile.open("itemCatalog.txt");
+
+
+
+    if (myFile.fail()) {
+        std::cout << "File cannot be opened";
+        exit(1);
+    }
+
+
+    while (!myFile.eof()) {
+
+        myFile >> str >> price;
+        array[u][0] = str;
+        array[u][1] = price;
+        pricearray[u] = stof(price);
+        u++;
 
     }
 
 
-     for (i = 0; i <= 30; i++) {
+    int j;
+    int temp;
 
-         std::cout << i << "." << setw(2) << sortedarray[i][0] << setw(8) << "$" << sortedarray[i][1] << std::endl;
+    string tempstringname;
+    string tempstringcost;
+    
+
+    //sorting - DESCENDING ORDER
+    for (i = 0; i < amount; i++)
+    {
+        for (j = i + 1; j < amount-1; j++)
+        {
+            if (pricearray[i] < pricearray[j])
+            {
+                temp = pricearray[i];
+                tempstringname = array[i][0];
+                tempstringcost = array[i][1];
+                pricearray[i] = pricearray[j];
+                array[i][0] = array[j][0];
+                array[i][1] = array[j][1];
+                pricearray[j] = temp;
+                array[j][0] = tempstringname;
+                array[j][1] = tempstringcost;
+
+            }
+        }
+    }
+
+
+
+     for (i = 0; i <= amount-2; i++) {
+
+         std::cout << i+1 << ":" << setw(2) << array[i][0] << setw(8) << "$" << array[i][1] << std::endl;
         
     }
 
 
-
+     myFile.close();
 
 }
 

@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\Chris\source\repos\HW3Part5\HW3Part5\main.cpp(44,12): warning C4101: 'j': unreferenced local variable
+C:\Users\Chris\source\repos\HW3Part5\HW3Part5\main.cpp(44,9): warning C4101: 'i': unreferenced local variable
+C:\Users\Chris\source\repos\HW3Part5\HW3Part5\main.cpp(44,18): warning C4101: 'temp': unreferenced local variable
+  HW3Part5.vcxproj -> C:\Users\Chris\source\repos\HW3Part5\x64\Debug\HW3Part5.exe

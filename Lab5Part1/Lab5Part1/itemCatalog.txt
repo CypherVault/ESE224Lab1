@@ -1,7 +1,19 @@
-RTX_3080 699
-Play_Station 499
+RTX_3080 699.00
+Play_Station 499.00
 "Heidi" 14.99	
-iPad_Pro 999
+iPad_Pro 999.00
 Kindle_Oasis 199.99
-EosR5 3899
-tttt 23422
+EosR5 3899.00
+tttt 23422.00
+red 40.00
+youtube 9000
+tree 60
+WD40 45.59
+WD40 50
+wd 70
+test 899
+MacBook 599
+Iphone 1200
+Gloves 10
+
+Tire 120

@@ -12,8 +12,9 @@ private:
 	string name;
 	double price;
 	double max_price;
-	string array[30][2];
-	string sortedarray[30][2];
+	string array[20][2];
+	float pricearray[10];
+	string sortedarray[20][2];
 
 public: 
 	List();

@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Chris\source\repos\HW3Part2\HW3Part2\main.cpp(16,23): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  HW3Part2.vcxproj -> C:\Users\Chris\source\repos\HW3Part2\x64\Debug\HW3Part2.exe

@@ -3,14 +3,14 @@
 
 using namespace std;
 
-double sqrt(double number)
+double sqrt(double square)
 {
     double error = 0.001; //precision
-    double s = number;
+    double s = square;
 
-    while ((s - number / s) > error) //loop until precision satisfied 
+    while ((s - square / s) > error)
     {
-        s = (s + number / s) / 2;
+        s = (s + square / s) / 2;
     }
     return s;
 }

@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\Chris\source\repos\Lab10Part4\Lab10Part4\main.cpp(22,27): warning C4099: 'node': type name first seen using 'class' now seen using 'struct'
+C:\Users\Chris\source\repos\Lab10Part4\Lab10Part4\main.cpp(6): message : see declaration of 'node'
+  Lab10Part4.vcxproj -> C:\Users\Chris\source\repos\Lab10Part4\x64\Debug\Lab10Part4.exe
